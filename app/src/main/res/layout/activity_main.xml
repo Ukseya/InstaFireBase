@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <EditText
+        android:id="@+id/etSignIneMail"
+        android:layout_width="256dp"
+        android:layout_height="48dp"
+        android:hint="e-mail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="256dp"
+
+        />
+
+    <EditText
+        android:id="@+id/etSignInPassword"
+        android:layout_width="256dp"
+        android:layout_height="48dp"
+        android:hint="password"
+        app:layout_constraintTop_toBottomOf="@+id/etSignIneMail"
+        app:layout_constraintLeft_toLeftOf="@+id/etSignIneMail"
+        app:layout_constraintRight_toRightOf="@+id/etSignIneMail"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:onClick="signInClicked"
+        android:id="@+id/btSignIn"
+        app:layout_constraintLeft_toLeftOf="@+id/etSignInPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etSignInPassword"
+        app:layout_constraintRight_toLeftOf="@id/btSignUp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SignUp"
+        android:onClick="signUpClicked"
+        android:id="@+id/btSignUp"
+        app:layout_constraintTop_toBottomOf="@id/etSignInPassword"
+        app:layout_constraintRight_toRightOf="@id/etSignInPassword"
+        app:layout_constraintLeft_toRightOf="@id/btSignIn"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
